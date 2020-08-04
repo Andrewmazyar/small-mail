@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    <thead>
+        <tr>
+            <h3>[[${details.theme}]]</h3>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <h4>[[${details.forWhom}]]: [[${details.user}]]</h4>
+            <h5>[[${details.body}]]</h5>
+            <form method="post">
+                <input type="hidden" name="sender" th:value="${details.user}"/>
+                <input type="hidden" name="theme" th:value="${details.theme}"/>
+                <button type="submit">reply</button>
+            </form>
+        </tr>
+    </tbody>
+</body>
+</html>

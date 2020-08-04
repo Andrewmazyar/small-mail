@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<thead>
+<tr>
+    <th>List of Users: </th>
+</tr>
+</thead>
+<tbody>
+    <tr th:if="${users.empty}">
+        <td colspan="2"> No users</td>
+    </tr>
+    <ul>
+        <tr th:each="user : ${users}">
+            <li>[[${user.email}]]</li>
+        </tr>
+    </ul>
+</tbody>
+</body>
+</html>

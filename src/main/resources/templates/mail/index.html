@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<div style="position: absolute; /*or fixed*/; width: 50%; height: 300px; left: 50%; top:100px; margin: 0 0 0 -25%">
+    <body>
+        <div style="text-align: center;">
+            <form method="post">
+                <input type="text" name="search" placeholder="SEARCH">
+                <button type="submit">search</button>
+            </form>
+        </div>
+        <a href="http://localhost:8080/mail"><button>Write Message</button></a>
+        <div style="text-align: center;">
+            <tbody>
+                <tr th:if="${letters.empty}">
+                    <td colspan="2">No element </td>
+                </tr>
+                <form method="POST" action="/delete">
+                <tr th:each="letter : ${letters}">
+                    <input type="checkbox" name="in" th:value="${letter.id}"/> [[${letter.inOrOut}]],
+                    <a th:href="@{http://localhost:8080/details/{id}(id = ${letter.id})}">[[${letter.theme}]],</a>
+                    [[${letter.time}]]<br>
+                </tr>
+                    <a th:href="@{http://localhost:8080/delete}"><button type="submit" style="background-color:red"> Delete all marks</button></a><br>
+                </form>
+            </tbody>
+        </div>
+    </body>
+</div>
+</html>
