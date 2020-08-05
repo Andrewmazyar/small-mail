@@ -4,12 +4,14 @@ import java.time.LocalDateTime;
 import java.util.List;
 import com.smallmail.smallmail.Service.LetterService;
 import com.smallmail.smallmail.model.entity.Letter;
-import com.smallmail.smallmail.model.entity.User;
 import com.smallmail.smallmail.repository.LetterRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LetterServiceImpl implements LetterService {
+    private static final Logger LOGGER = LogManager.getLogger(LetterServiceImpl.class);
 
     private final LetterRepository letterRepository;
 
@@ -20,6 +22,7 @@ public class LetterServiceImpl implements LetterService {
     @Override
     public Letter create(Letter letter) {
         letter.setTime(LocalDateTime.now());
+        LOGGER.info("Letter was created " + letter.getTime() + " by owner" + letter.getOwner());
         return letterRepository.save(letter);
     }
 
@@ -30,6 +33,7 @@ public class LetterServiceImpl implements LetterService {
 
     @Override
     public Letter update(Letter letter) {
+        LOGGER.info("Letter was updated by user " + letter.getOwner());
         return letterRepository.saveAndFlush(letter);
     }
 

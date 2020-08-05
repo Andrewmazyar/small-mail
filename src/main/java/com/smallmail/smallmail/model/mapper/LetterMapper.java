@@ -8,6 +8,8 @@ import com.smallmail.smallmail.model.dto.LetterDetailDto;
 import com.smallmail.smallmail.model.dto.LetterResponseDto;
 import com.smallmail.smallmail.model.entity.Letter;
 import com.smallmail.smallmail.model.entity.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class LetterMapper {
+    private static final Logger LOGGER = LogManager.getLogger(LetterMapper.class);
 
     private final LetterService letterService;
 
@@ -65,18 +68,23 @@ public class LetterMapper {
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         if (userDetails.getUsername().equals(letter.getOwner())) {
             letter.setSender(null);
+            LOGGER.info("letter was deleted for user: " + letter.getOwner() + " successfully");
         } else {
             for (User user : letter.getRecipient()) {
                 if (user.getEmail().equals(userDetails.getUsername())) {
                     letter.getRecipient().remove(user);
+                    LOGGER.info("letter was deleted for user: " + user.getEmail()
+                            + " successfully");
                     break;
                 }
             }
         }
         if (letter.getSender() == null && letter.getRecipient().isEmpty()) {
             letterService.remove(id);
+            LOGGER.info("letter was deleted successfully");
         } else {
             letterService.update(letter);
+            LOGGER.info("letter was updated successfully");
         }
     }
 

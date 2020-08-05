@@ -4,10 +4,13 @@ import java.util.List;
 import com.smallmail.smallmail.Service.RoleService;
 import com.smallmail.smallmail.model.entity.Role;
 import com.smallmail.smallmail.repository.RoleRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RoleServiceImpl implements RoleService {
+    private static final Logger LOGGER = LogManager.getLogger(RoleServiceImpl.class);
 
     private final RoleRepository roleRepository;
 
@@ -17,6 +20,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Role create(Role role) {
+        LOGGER.info("role was added successfully");
         return roleRepository.save(role);
     }
 
