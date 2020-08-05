@@ -3,8 +3,6 @@ package com.smallmail.smallmail.model.mapper;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.List;
-import java.util.stream.Collectors;
 import com.smallmail.smallmail.Service.LetterService;
 import com.smallmail.smallmail.model.dto.LetterDetailDto;
 import com.smallmail.smallmail.model.dto.LetterResponseDto;
@@ -24,7 +22,7 @@ public class LetterMapper {
         this.letterService = letterService;
     }
 
-    public LetterDetailDto something(Letter letter) {
+    public LetterDetailDto whoSender(Letter letter) {
         LetterDetailDto response;
         if (isLogger(letter.getOwner())) {
              response = convertToDetailDto(letter.getReceivers(),
