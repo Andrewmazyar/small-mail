@@ -23,4 +23,6 @@ public class User {
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
+    @Column(name = "picture", length = 3_000_000)
+    private byte[] picture;
 }
