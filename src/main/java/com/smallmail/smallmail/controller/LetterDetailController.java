@@ -26,7 +26,7 @@ public class LetterDetailController {
 
     @GetMapping("/{id}")
     public String getDetails(@PathVariable Long id, Model model) {
-        LetterDetailDto response = letterMapper.whoSender(letterService.getById(id));
+        LetterDetailDto response = letterMapper.ifSender(letterService.getById(id));
         model.addAttribute("details", response);
         return "mail/details";
     }

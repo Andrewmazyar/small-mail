@@ -25,7 +25,7 @@ public class LetterMapper {
         this.letterService = letterService;
     }
 
-    public LetterDetailDto whoSender(Letter letter) {
+    public LetterDetailDto ifSender(Letter letter) {
         LetterDetailDto response;
         if (isLogger(letter.getOwner())) {
              response = convertToDetailDto(letter.getReceivers(),
