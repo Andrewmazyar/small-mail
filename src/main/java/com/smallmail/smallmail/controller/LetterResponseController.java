@@ -37,7 +37,7 @@ public class LetterResponseController {
     public String getALLLettersByUserLogin(Model model) throws UnsupportedEncodingException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        byte[] encodeBase64 = Base64.encodeBase64(userService.getByEmail(userDetails.getUsername()).getPicture());
+        byte[] encodeBase64 = (userService.getByEmail(userDetails.getUsername()).getPicture());
         String photo = new String(encodeBase64, "UTF-8");
         model.addAttribute("photo", photo);
         model.addAttribute("letters", letterService

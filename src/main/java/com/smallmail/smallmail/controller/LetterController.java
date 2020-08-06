@@ -56,7 +56,7 @@ public class LetterController {
                 .map(User::getEmail)
                 .collect(Collectors.joining("; ")));
         letterService.create(letter);
-        return "mail/writeMail";
+        return "redirect:/";
     }
 
     @GetMapping

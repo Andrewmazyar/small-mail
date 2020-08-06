@@ -71,7 +71,6 @@ public class InjectUsersController {
         ClassPathResource imageFile4 = new ClassPathResource("/photo/citizen.png");
         citizen.setPicture(new byte[(int) imageFile4.contentLength()]);
         userService.create(citizen);
-
         return "user/inject";
     }
 
