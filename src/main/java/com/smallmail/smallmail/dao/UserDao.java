@@ -1,17 +1,16 @@
-package com.smallmail.smallmail.Service;
+package com.smallmail.smallmail.dao;
 
 import java.util.List;
 import com.smallmail.smallmail.model.entity.User;
 
-public interface UserService {
+public interface UserDao {
     User create(User user);
 
     User getByEmail(String email);
-
-    List<User> getAll();
 
     User getById(Long id);
 
     User update(User user);
 
+    List<User> getAll();
 }

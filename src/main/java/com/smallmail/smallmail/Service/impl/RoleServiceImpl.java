@@ -2,8 +2,8 @@ package com.smallmail.smallmail.Service.impl;
 
 import java.util.List;
 import com.smallmail.smallmail.Service.RoleService;
+import com.smallmail.smallmail.dao.RoleDao;
 import com.smallmail.smallmail.model.entity.Role;
-import com.smallmail.smallmail.repository.RoleRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -12,30 +12,29 @@ import org.springframework.stereotype.Service;
 public class RoleServiceImpl implements RoleService {
     private static final Logger LOGGER = LogManager.getLogger(RoleServiceImpl.class);
 
-    private final RoleRepository roleRepository;
+    private final RoleDao roleDao;
 
-    public RoleServiceImpl(RoleRepository roleRepository) {
-        this.roleRepository = roleRepository;
+    public RoleServiceImpl(RoleDao roleDao) {
+        this.roleDao = roleDao;
     }
 
     @Override
-    public Role create(Role role) {
-        LOGGER.info("role was added successfully");
-        return roleRepository.save(role);
+    public void create(Role role) {
+        roleDao.create(role);
     }
 
     @Override
     public Role getByRoleName(String role) {
-        return roleRepository.findByRoleName(Role.RoleName.valueOf(role));
+        return roleDao.getByRoleName(Role.RoleName.valueOf(role));
     }
 
     @Override
     public Role getById(Long id) {
-        return roleRepository.findById(id).get();
+        return roleDao.getById(id);
     }
 
     @Override
     public List<Role> getAll() {
-        return roleRepository.findAll();
+        return roleDao.getAll();
     }
 }
