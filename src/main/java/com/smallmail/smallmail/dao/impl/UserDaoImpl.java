@@ -68,7 +68,8 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User getById(Long id) {
         String sql = "SELECT * FROM users WHERE id = ?";
-        User user = jdbcTemplate.queryForObject(sql, new Object[]{id}, new MapperUser());
+        User user = (User) jdbcTemplate.queryForObject(sql, new Object[]{id},
+                new BeanPropertyRowMapper(User.class));
         user.setRoles(completeRole(roleDao.getAllByUserId(user.getId())));
         return user;
     }

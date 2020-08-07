@@ -16,8 +16,6 @@ CREATE TABLE `users` (
 CREATE TABLE `user_roles` (
     `user_id` BIGINT(11) NOT NULL,
     `role_id` BIGINT(11) NOT NULL,
---     INDEX `user_user_idx` (`user_id` ASC),
---     INDEX `user_role_idx` (`role_id` ASC),
     CONSTRAINT `user_role_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `users` (`id`)
@@ -34,13 +32,28 @@ CREATE TABLE `letters` (
   `id` BIGINT(11) NOT NULL AUTO_INCREMENT,
   `theme` VARCHAR(150) ,
   `body` VARCHAR(1024) ,
-  `timeStamp` DATETIME NOT NULL,
+  `timeStamp` VARCHAR(225) NOT NULL,
   `owner` VARCHAR(225)  NOT NULL,
   `receivers` VARCHAR(255) NOT NULL,
   `user_id` BIGINT(11) NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_letters_users`
-    FOREIGN KEY (`id`)
+    FOREIGN KEY (`user_id`)
     REFERENCES `users` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
+
+CREATE TABLE `user_letters` (
+    `user_id` BIGINT(11) NOT NULL,
+    `letter_id` BIGINT(11) NOT NULL,
+    CONSTRAINT `user_letter_user`
+    FOREIGN KEY (`user_id`)
+        REFERENCES `users` (`id`)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    CONSTRAINT `user_letter`
+        FOREIGN KEY (`letter_id`)
+        REFERENCES `letters` (`id`)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);

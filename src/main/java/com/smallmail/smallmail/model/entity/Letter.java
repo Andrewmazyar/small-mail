@@ -15,4 +15,16 @@ public class Letter {
     private String owner;
     private String receivers;
 
+    public Letter() {}
+
+    public Letter(Long id, LocalDateTime time, String theme, String body,
+                   User sender, String owner, String receivers) {
+        this.id = id;
+        this.time = time;
+        this.theme = theme;
+        this.body = body;
+        this.sender = sender;
+        this.owner = owner;
+        this.receivers = receivers;
+    }
 }

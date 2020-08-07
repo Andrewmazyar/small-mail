@@ -12,8 +12,6 @@ public interface LetterService {
 
     Letter getById(Long id);
 
-    Letter getByTheme(String theme);
-
     List<Letter> getAllByUser(Long id);
 
     List<Letter> getAll();

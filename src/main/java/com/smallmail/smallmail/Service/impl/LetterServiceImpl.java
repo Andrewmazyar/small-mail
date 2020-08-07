@@ -22,8 +22,9 @@ public class LetterServiceImpl implements LetterService {
     @Override
     public Letter create(Letter letter) {
         letter.setTime(LocalDateTime.now());
+        Letter newLetter = letterDao.create(letter);
         LOGGER.info("Letter was created " + letter.getTime() + " by owner" + letter.getOwner());
-        return null;
+        return newLetter;
     }
 
     @Override
@@ -43,13 +44,8 @@ public class LetterServiceImpl implements LetterService {
     }
 
     @Override
-    public Letter getByTheme(String theme) {
-        return null;
-    }
-
-    @Override
     public List<Letter> getAllByUser(Long id) {
-        return null;
+        return letterDao.getAllByUserId(id);
     }
 
     @Override

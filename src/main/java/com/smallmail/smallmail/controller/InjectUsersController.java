@@ -1,12 +1,11 @@
 package com.smallmail.smallmail.controller;
 
-import java.io.IOException;
+import javax.annotation.PostConstruct;
 import java.util.Set;
 import com.smallmail.smallmail.Service.RoleService;
 import com.smallmail.smallmail.Service.UserService;
 import com.smallmail.smallmail.model.entity.Role;
 import com.smallmail.smallmail.model.entity.User;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,7 +28,7 @@ public class InjectUsersController {
     }
 
     @GetMapping
-    public String injectUsers() throws IOException {
+    public String injectUsers() {
         setRoles();
 
         User user = new User();
