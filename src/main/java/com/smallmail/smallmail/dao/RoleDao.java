@@ -14,7 +14,7 @@ public interface RoleDao {
 
     List<Role> getAll();
 
-    Set<Role> getAllByUserId(Long id);
+    List<Role> getAllByUserId(Long id);
 
     public void deleteRoleByUserId(Long userId);
 }

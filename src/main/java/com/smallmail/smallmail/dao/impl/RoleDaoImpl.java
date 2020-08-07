@@ -1,12 +1,12 @@
 package com.smallmail.smallmail.dao.impl;
 
 import java.util.List;
-import java.util.Set;
 import com.smallmail.smallmail.dao.RoleDao;
 import com.smallmail.smallmail.dao.daoMapper.MapperRole;
 import com.smallmail.smallmail.model.entity.Role;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -48,12 +48,13 @@ public class RoleDaoImpl implements RoleDao {
     }
 
     @Override
-    public Set<Role> getAllByUserId(Long id) {
+    public List<Role> getAllByUserId(Long id) {
         String sql = "SELECT * FROM roles"
-                + " LEFT JOIN user_roles ON roles.id = user_roles.role_id"
+                + " JOIN user_roles ON roles.id = user_roles.role_id"
                 + " WHERE user_id = ?";
-        Set<Role> roles = (Set<Role>) jdbcTemplate.query(sql, new Object[]{id}, new MapperRole());
-        return roles;
+        return jdbcTemplate.query(sql,
+                new Object[]{id},
+                new BeanPropertyRowMapper(Role.class));
     }
 
     @Override
