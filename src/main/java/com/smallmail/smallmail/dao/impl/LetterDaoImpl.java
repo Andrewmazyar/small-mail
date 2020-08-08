@@ -1,26 +1,18 @@
 package com.smallmail.smallmail.dao.impl;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.Map;
 import com.smallmail.smallmail.dao.LetterDao;
 import com.smallmail.smallmail.dao.UserDao;
 import com.smallmail.smallmail.model.entity.Letter;
 import com.smallmail.smallmail.model.entity.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -66,27 +58,66 @@ public class LetterDaoImpl implements LetterDao {
     }
 
     @Override
-    public List<Letter> getAllByPhrase(String phrase) {
-        return null;
+    public List<Letter> getAllByPhrase(String phrase, Long id) {
+        String word = "%" + phrase + "%";
+        String sql = "SELECT * FROM letters AS l LEFT JOIN user_letters AS ul "
+                + "ON  l.id = ul.letter_id WHERE l.theme LIKE ? OR l.body LIKE ? "
+                + "GROUP BY l.timeStamp HAVING ul.user_id = ? OR l.user_id = ? "
+                + "ORDER BY l.timeStamp DESC LIMIT(20)";
+        List<Letter> letters = jdbcTemplate.query(sql, new Object[]{word , word, id, id},
+                (rs, rowNum) ->
+                        new Letter(
+                                rs.getLong("id"),
+                                LocalDateTime.parse(rs.getString("timeStamp")),
+                                rs.getString("theme"),
+                                rs.getString("body"),
+                                userDao.getById(rs.getLong("user_id")),
+                                rs.getString("owner"),
+                                rs.getString("receivers")
+                        )
+        );
+        for (Letter let : letters) {
+            let.setRecipient(addUserToLetter(let.getId()));
+        }
+        return letters;
     }
 
     @Override
     public Letter update(Letter letter) {
-        return null;
+        Long userId = letter.getSender() == null ? null : letter.getSender().getId();
+        String sql = "UPDATE letters SET  user_id = ?  WHERE id = ?";
+        jdbcTemplate.update(sql, userId, letter.getId());
+        deleteLetterForUser(letter.getId());
+        if (!letter.getRecipient().isEmpty()) {
+            addLetterForUser(letter.getRecipient(), letter.getId());
+        }
+        return letter;
     }
 
     @Override
     public Letter getById(Long id) {
         String sql = "SELECT * FROM letters WHERE id = ?";
         Letter letter = (Letter) jdbcTemplate.queryForObject(sql, new Object[]{id},
-                new BeanPropertyRowMapper(Letter.class));
+                (rs, rowNum) ->
+                        new Letter(
+                                rs.getLong("id"),
+                                LocalDateTime.parse(rs.getString("timeStamp")),
+                                rs.getString("theme"),
+                                rs.getString("body"),
+                                userDao.getById(rs.getLong("user_id")),
+                                rs.getString("owner"),
+                                rs.getString("receivers")
+                        )
+        );
+        letter.setRecipient(addUserToLetter(letter.getId()));
         return letter;
     }
 
     @Override
     public List<Letter> getAllByUserId(Long id) {
-        String sql = "SELECT * FROM letters AS l JOIN user_letters AS ul "
-                + "ON  l.id = ul.letter_id WHERE ul.user_id = ? OR l.user_id = ?";
+        String sql = "SELECT * FROM letters AS l LEFT JOIN user_letters AS ul "
+                + "ON  l.id = ul.letter_id GROUP BY l.timeStamp HAVING ul.user_id = ?"
+                + " OR l.user_id = ? ORDER By l.timeStamp DESC";
         List<Letter> letters = jdbcTemplate.query(sql, new Object[]{id, id},
                 (rs, rowNum) ->
                 new Letter(
@@ -100,23 +131,15 @@ public class LetterDaoImpl implements LetterDao {
                         )
         );
         for (Letter let : letters) {
-            List<User> users = new ArrayList<>();
-            String numberSql = "SELECT user_id FROM user_letters WHERE letter_id = ?";
-            List<Long> numbers = jdbcTemplate.query(numberSql, new Object[]{let.getId()},
-                    (rs, rowNum) ->
-                    new Long(
-                            rs.getLong("user_id")
-                    ));
-            for (Long l : numbers) {
-                users.add(userDao.getById(l));
-            }
-            let.setRecipient(users);
+            let.setRecipient(addUserToLetter(let.getId()));
         }
         return letters;
     }
 
     @Override
     public void deleteById(Long id) {
+        String sql = "DELETE letters WHERE id = ?";
+        jdbcTemplate.update(sql, id);
 
     }
 
@@ -125,5 +148,23 @@ public class LetterDaoImpl implements LetterDao {
             String sqlRole = "INSERT INTO user_letters (user_id, letter_id) VALUES(?, ?)";
             jdbcTemplate.update(sqlRole, user.getId(), letterId);
         }
+    }
+
+    private void deleteLetterForUser(Long letterId) {
+        String sql = "DELETE user_letters WHERE letter_id = ?";
+        jdbcTemplate.update(sql, letterId);
+    }
+    private List<User> addUserToLetter(Long id) {
+        List<User> users = new ArrayList<>();
+        String numberSql = "SELECT user_id FROM user_letters WHERE letter_id = ?";
+        List<Long> numbers = jdbcTemplate.query(numberSql, new Object[]{id},
+                (rs, rowNum) ->
+                        new Long(
+                                rs.getLong("user_id")
+                        ));
+        for (Long l : numbers) {
+            users.add(userDao.getById(l));
+        }
+        return users;
     }
 }

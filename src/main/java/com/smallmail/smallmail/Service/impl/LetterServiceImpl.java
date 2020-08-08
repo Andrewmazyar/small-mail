@@ -29,18 +29,18 @@ public class LetterServiceImpl implements LetterService {
 
     @Override
     public List<Letter> getByPhrase(String phrase, Long id) {
-        return null;
+        return letterDao.getAllByPhrase(phrase, id);
     }
 
     @Override
     public Letter update(Letter letter) {
         LOGGER.info("Letter was updated by user " + letter.getOwner());
-        return null;
+        return letterDao.update(letter);
     }
 
     @Override
     public Letter getById(Long id) {
-        return null;
+        return letterDao.getById(id);
     }
 
     @Override
@@ -49,11 +49,7 @@ public class LetterServiceImpl implements LetterService {
     }
 
     @Override
-    public List<Letter> getAll() {
-        return null;
-    }
-
-    @Override
     public void remove(Long id) {
+        letterDao.deleteById(id);
     }
 }

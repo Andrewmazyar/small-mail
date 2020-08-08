@@ -14,7 +14,5 @@ public interface LetterService {
 
     List<Letter> getAllByUser(Long id);
 
-    List<Letter> getAll();
-
     void remove(Long id);
 }

@@ -35,13 +35,12 @@ CREATE TABLE `letters` (
   `timeStamp` VARCHAR(225) NOT NULL,
   `owner` VARCHAR(225)  NOT NULL,
   `receivers` VARCHAR(255) NOT NULL,
-  `user_id` BIGINT(11) NOT NULL,
+  `user_id` BIGINT(11) NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_letters_users`
     FOREIGN KEY (`user_id`)
     REFERENCES `users` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE);
+);
 
 CREATE TABLE `user_letters` (
     `user_id` BIGINT(11) NOT NULL,

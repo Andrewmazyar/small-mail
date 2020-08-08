@@ -6,7 +6,7 @@ import com.smallmail.smallmail.model.entity.Letter;
 public interface LetterDao {
     Letter create(Letter letter);
 
-    List<Letter> getAllByPhrase(String phrase);
+    List<Letter> getAllByPhrase(String phrase, Long id);
 
     Letter update(Letter letter);
 

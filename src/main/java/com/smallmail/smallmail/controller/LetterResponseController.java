@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 import com.smallmail.smallmail.Service.LetterService;
 import com.smallmail.smallmail.Service.UserService;
 import com.smallmail.smallmail.model.dto.LetterResponseDto;
+import com.smallmail.smallmail.model.entity.User;
 import com.smallmail.smallmail.model.mapper.LetterMapper;
-import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -49,8 +49,8 @@ public class LetterResponseController {
     public String searchByText(Model model, @RequestParam String search) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        List<LetterResponseDto> letters = letterService.getByPhrase(search,
-                userService.getByEmail(userDetails.getUsername()).getId())
+        User user = userService.getByEmail(userDetails.getUsername());
+        List<LetterResponseDto> letters = letterService.getByPhrase(search, user.getId())
                 .stream()
                 .map(letterMapper::convertToDto)
                 .collect(Collectors.toList());
