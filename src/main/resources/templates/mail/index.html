@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>main</title>
 </head>
-<div style="position: absolute; /*or fixed*/; width: 50%; height: 300px; left: 50%; top:100px; margin: 0 0 0 -25%">
     <body>
-        <div style="text-align: center;">
+    <div style="position: absolute; /*or fixed*/; width: 50%; height: 300px; left: 50%; top:100px; margin: 0 0 0 -25%">
+        <a th:href="@{http://localhost:8080/user-details/{email}(email = ${email})}">[[${email}]]</a>
+    <div style="text-align: center;">
             <form method="post">
                 <input type="text" name="search" placeholder="SEARCH">
                 <button type="submit">search</button>
@@ -28,6 +29,6 @@
                 </form>
             </tbody>
         </div>
+    </div>
     </body>
-</div>
 </html>

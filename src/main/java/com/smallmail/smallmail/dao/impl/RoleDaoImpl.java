@@ -1,13 +1,17 @@
 package com.smallmail.smallmail.dao.impl;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 import com.smallmail.smallmail.dao.RoleDao;
-import com.smallmail.smallmail.dao.daoMapper.MapperRole;
 import com.smallmail.smallmail.model.entity.Role;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -20,30 +24,56 @@ public class RoleDaoImpl implements RoleDao {
     }
 
     @Override
-    public void create(Role role) {
-        String sql = "INSERT INTO roles (name) VALUES(?)";
-        jdbcTemplate.update(sql, role.getRoleName());
-        LOGGER.info("role was created" + role.getRoleName().toString() + " successfully");
+    public Role create(Role role) {
+        GeneratedKeyHolder holder = new GeneratedKeyHolder();
+        jdbcTemplate.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection)
+                    throws SQLException {
+                String sql = "INSERT INTO roles(role_name) VALUES(?)";
+                PreparedStatement statement = connection.prepareStatement(sql,
+                        Statement.RETURN_GENERATED_KEYS);
+                statement.setString(1, role.getRoleName().toString());
+                return statement;
+            }
+        }, holder);
+        role.setId(holder.getKey().longValue());
+        LOGGER.info("role was created" + role.getRoleName() + " successfully");
+        return role;
     }
 
     @Override
-    public Role getByRoleName(Role.RoleName roleName) {
-        String sql = "SELECT * FROM roles WHERE name = ?";
-        Role role = jdbcTemplate.queryForObject(sql, new Object[]{roleName}, new MapperRole());
+    public Role getByRoleName(String roleName) {
+        String sql = "SELECT * FROM roles WHERE role_name = ?";
+        Role role = jdbcTemplate.queryForObject(sql, new Object[]{roleName},
+                (rs, rowNum) ->
+                new Role(
+                        rs.getLong("id"),
+                        Role.RoleName.valueOf(rs.getString("role_name"))
+                ));
         return role;
     }
 
     @Override
     public Role getById(Long id) {
         String sql = "SELECT * FROM roles WHERE id = ?";
-        Role role = jdbcTemplate.queryForObject(sql, new Object[]{id}, new MapperRole());
+        Role role = jdbcTemplate.queryForObject(sql, new Object[]{id},
+                (rs, rowNum) ->
+                        new Role(
+                                rs.getLong("id"),
+                                Role.RoleName.valueOf(rs.getString("role_name"))
+                        ));
         return role;
     }
 
     @Override
     public List<Role> getAll() {
         String sql = "SELECT * FROM roles";
-        List roles = jdbcTemplate.query(sql, new MapperRole());
+        List<Role> roles = jdbcTemplate.query(sql, (rs, rowNum) ->
+                new Role(
+                        rs.getLong("id"),
+                        Role.RoleName.valueOf(rs.getString("role_name"))
+                ));
         return roles;
     }
 
@@ -54,7 +84,11 @@ public class RoleDaoImpl implements RoleDao {
                 + " WHERE user_id = ?";
         return jdbcTemplate.query(sql,
                 new Object[]{id},
-                new BeanPropertyRowMapper(Role.class));
+                (rs, rowNum) ->
+                        new Role(
+                                rs.getLong("id"),
+                                Role.RoleName.valueOf(rs.getString("role_name"))
+                        ));
     }
 
     @Override

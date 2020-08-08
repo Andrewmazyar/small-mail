@@ -1,14 +1,13 @@
 package com.smallmail.smallmail.dao;
 
 import java.util.List;
-import java.util.Set;
 import com.smallmail.smallmail.model.entity.Role;
 
 public interface RoleDao {
 
-    void create(Role role);
+    Role create(Role role);
 
-    Role getByRoleName(Role.RoleName roleName);
+    Role getByRoleName(String roleName);
 
     Role getById(Long id);
 

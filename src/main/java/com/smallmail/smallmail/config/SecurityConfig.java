@@ -31,7 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/inject-users").permitAll()
                 .antMatchers(HttpMethod.GET, "/users", "/").permitAll()
                 .antMatchers(HttpMethod.GET, "/mail", "/h2-console/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/details/**").hasRole("USER")
+                .antMatchers(HttpMethod.GET, "/details/**", "/user-details/**").hasRole("USER")
                 .antMatchers(HttpMethod.POST, "/mail", "/h2-console/**", "/", "/delete/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

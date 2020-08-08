@@ -1,10 +1,10 @@
 
 CREATE TABLE `roles` (
   `id` BIGINT(11) NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NOT NULL,
+  `role_name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC));
+  UNIQUE INDEX `name_UNIQUE` (`role_name` ASC));
 
 CREATE TABLE `users` (
   `id` BIGINT(11) NOT NULL AUTO_INCREMENT,

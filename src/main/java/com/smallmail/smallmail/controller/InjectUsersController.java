@@ -65,11 +65,11 @@ public class InjectUsersController {
 
     private void setRoles() {
         Role user = new Role();
-        user.setRoleName(Role.RoleName.USER);
+        user.setRoleName(Role.RoleName.valueOf("USER"));
         roleService.create(user);
 
-        Role admin = new Role();
-        admin.setRoleName(Role.RoleName.APICALL);
-        roleService.create(admin);
+        Role apiCall = new Role();
+        apiCall.setRoleName(Role.RoleName.APICALL);
+        roleService.create(apiCall);
     }
 }

@@ -1,6 +1,5 @@
 package com.smallmail.smallmail.controller;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.smallmail.smallmail.Service.LetterService;
@@ -34,14 +33,15 @@ public class LetterResponseController {
     }
 
     @GetMapping
-    public String getALLLettersByUserLogin(Model model) throws UnsupportedEncodingException {
+    public String getALLLettersByUserLogin(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        model.addAttribute("letters", letterService
-                .getAllByUser(userService.getByEmail(userDetails.getUsername()).getId())
+        User user = userService.getByEmail(userDetails.getUsername());
+        model.addAttribute("letters", letterService.getAllByUser(user.getId())
                 .stream()
                 .map(letterMapper::convertToDto)
                 .collect(Collectors.toList()));
+        model.addAttribute("email", user.getEmail());
         return "mail/index";
     }
 

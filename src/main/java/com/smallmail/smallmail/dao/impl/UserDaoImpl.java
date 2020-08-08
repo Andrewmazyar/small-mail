@@ -8,7 +8,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import com.smallmail.smallmail.dao.RoleDao;
-import com.smallmail.smallmail.dao.daoMapper.MapperUser;
 import com.smallmail.smallmail.model.entity.Role;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -79,8 +78,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User update(User user) {
-        String sql = "UPDATE users set email = ? password = ? WHERE id = ?";
-        jdbcTemplate.update(sql, user.getEmail(), user.getPassword(), user.getId());
+        String sql = "UPDATE users set email = ? WHERE id = ?";
+        jdbcTemplate.update(sql, user.getEmail(), user.getId());
         roleDao.deleteRoleByUserId(user.getId());
         addRoleForUser(user.getRoles(), user.getId());
         return user;
