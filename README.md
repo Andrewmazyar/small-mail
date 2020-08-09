@@ -36,7 +36,7 @@ for run this app you should do in console:
  * mvn clean package
  * java - jar target/small-mail-0.0.1-SNAPSHOT.jar
  
-that works with project you should  inject users with url : /inject-users 
+When you start project you will receive 5 users with email and password:
 and you receive 5 users
 * name: user@gmail.com password: password
 * name: president@gmail.com password: president
@@ -45,6 +45,7 @@ and you receive 5 users
 * name: citizen@gmail.com password: citizen
 
 where you can communicate between them with the follow urls:
+* /users-details/** you pass to own page user and can include use Api for your app
 * / - you see all message and you can search messages by phrase
 * /mail - you can write any message to someone
 * /detail/1 - you can see all details about letter from or to whom this letter
