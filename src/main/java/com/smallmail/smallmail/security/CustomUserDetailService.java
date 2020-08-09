@@ -1,4 +1,4 @@
-package com.smallmail.smallmail.util;
+package com.smallmail.smallmail.security;
 
 import com.smallmail.smallmail.Service.UserService;
 import com.smallmail.smallmail.model.entity.User;
@@ -6,10 +6,10 @@ import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import static org.springframework.security.core.userdetails.User.withUsername;
 
-@Service
+@Component
 public class CustomUserDetailService implements UserDetailsService {
 
     private final UserService userService;

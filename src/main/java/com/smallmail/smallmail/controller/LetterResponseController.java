@@ -55,6 +55,7 @@ public class LetterResponseController {
                 .map(letterMapper::convertToDto)
                 .collect(Collectors.toList());
         model.addAttribute("letters", letters);
+        model.addAttribute("email", user.getEmail());
         return "mail/index";
     }
 
