@@ -56,3 +56,39 @@ CREATE TABLE `user_letters` (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
+
+INSERT INTO roles(role_name)
+VALUES ('APICALL');
+INSERT INTO roles(role_name)
+VALUES ('USER');
+
+INSERT INTO users(email, password)
+VALUES ('user@gmail.com', '$2a$10$iuQfUtCVLuz8C51UapGFZOghIns8wDS.qvdo02bUeVG4.Q2hS84rC');
+
+INSERT  INTO user_roles(role_id, user_id)
+VALUES(2,1);
+
+INSERT INTO users(email, password)
+VALUES ('president@gmail.com', '$2a$10$4t1yu5IydQ5mclhPcQ3fWenYpgipE2e2dxKmhr6HQnT3xVPZwGFBW');
+
+INSERT  INTO user_roles(role_id, user_id)
+VALUES(2,2);
+
+INSERT INTO users(email, password)
+VALUES ('minister@gmail.com', '$2a$10$xpjgE4GHf0o2fdSl2TVuleNhoSdLCmb8m9/cyPP0722X7BaCSbrP.');
+
+INSERT  INTO user_roles(role_id, user_id)
+VALUES(2,3);
+
+INSERT INTO users(email, password)
+VALUES ('deputy@gmail.com', '$2a$10$jdFgvEG2GoZ1im4iPWqd0eQ.KjAUuXUhfZ2mP/wMuTy8IERuNgiji');
+
+INSERT  INTO user_roles(role_id, user_id)
+VALUES(2,4);
+
+INSERT INTO users(email, password)
+VALUES ('citizen@gmail.com', '$2a$10$SRhgUH3KmBaDQuNLcOdezeCtpgntNw0wHZvrAX9l5N0kFS/Z4E5Ia');
+
+INSERT  INTO user_roles(role_id, user_id)
+VALUES(2,5);
+
