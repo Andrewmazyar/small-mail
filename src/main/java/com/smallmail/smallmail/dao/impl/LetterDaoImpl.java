@@ -159,9 +159,7 @@ public class LetterDaoImpl implements LetterDao {
         String numberSql = "SELECT user_id FROM user_letters WHERE letter_id = ?";
         List<Long> numbers = jdbcTemplate.query(numberSql, new Object[]{id},
                 (rs, rowNum) ->
-                        new Long(
-                                rs.getLong("user_id")
-                        ));
+                        rs.getLong("user_id"));
         for (Long l : numbers) {
             users.add(userDao.getById(l));
         }

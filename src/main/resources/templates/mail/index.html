@@ -5,8 +5,8 @@
     <title>main</title>
 </head>
     <body>
-    <a th:href="@{/logout}">logout
-    </a>
+    <a th:href="@{/logout}">logout</a>
+    <a th:href="@{/users}">users</a>
     <div style="position: absolute; /*or fixed*/; width: 50%; height: 300px; left: 50%; top:100px; margin: 0 0 0 -25%">
         <a th:href="@{/user-details/{email}(email = ${email})}">[[${email}]]</a>
     <div style="text-align: center;">
