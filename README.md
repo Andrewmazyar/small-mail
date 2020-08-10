@@ -50,6 +50,7 @@ and you receive 5 users
 
 where you can communicate between them with the follow urls:
 * /users-details/** you pass to own page user and can include use Api for your app
+    * for use role APICALL you should logout and again login
 * / - you see all message and you can search messages by phrase
 * /mail - you can write any message to someone
 * /detail/1 - you can see all details about letter from or to whom this letter
