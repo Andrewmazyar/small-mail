@@ -2,8 +2,8 @@ package com.smallmail.smallmail.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import com.smallmail.smallmail.Service.LetterService;
-import com.smallmail.smallmail.Service.UserService;
+import com.smallmail.smallmail.service.LetterService;
+import com.smallmail.smallmail.service.UserService;
 import com.smallmail.smallmail.model.dto.LetterResponseDto;
 import com.smallmail.smallmail.model.entity.User;
 import com.smallmail.smallmail.model.mapper.LetterMapper;

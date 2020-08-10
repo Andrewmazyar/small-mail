@@ -1,7 +1,7 @@
-package com.smallmail.smallmail.Service.impl;
+package com.smallmail.smallmail.service.impl;
 
 import java.util.List;
-import com.smallmail.smallmail.Service.RoleService;
+import com.smallmail.smallmail.service.RoleService;
 import com.smallmail.smallmail.dao.RoleDao;
 import com.smallmail.smallmail.model.entity.Role;
 import org.apache.logging.log4j.LogManager;

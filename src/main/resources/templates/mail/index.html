@@ -5,15 +5,17 @@
     <title>main</title>
 </head>
     <body>
+    <a th:href="@{/logout}">logout
+    </a>
     <div style="position: absolute; /*or fixed*/; width: 50%; height: 300px; left: 50%; top:100px; margin: 0 0 0 -25%">
-        <a th:href="@{http://localhost:8080/user-details/{email}(email = ${email})}">[[${email}]]</a>
+        <a th:href="@{/user-details/{email}(email = ${email})}">[[${email}]]</a>
     <div style="text-align: center;">
             <form method="post">
                 <input type="text" name="search" placeholder="SEARCH">
                 <button type="submit">search</button>
             </form>
         </div>
-        <a href="http://localhost:8080/mail"><button>Write Message</button></a>
+        <a href="/mail"><button>Write Message</button></a>
         <div style="text-align: center;">
             <tbody>
                 <tr th:if="${letters.empty}">
@@ -22,10 +24,10 @@
                 <form method="POST" action="/delete">
                 <tr th:each="letter : ${letters}">
                     <input type="checkbox" name="in" th:value="${letter.id}"/> [[${letter.inOrOut}]],
-                    <a th:href="@{http://localhost:8080/details/{id}(id = ${letter.id})}">[[${letter.theme}]],</a>
+                    <a th:href="@{/details/{id}(id = ${letter.id})}">[[${letter.theme}]],</a>
                     [[${letter.time}]]<br>
                 </tr>
-                    <a th:href="@{http://localhost:8080/delete}"><button type="submit" style="background-color:red"> Delete all marks</button></a><br>
+                    <a th:href="@{/delete}"><button type="submit" style="background-color:red"> Delete all marks</button></a><br>
                 </form>
             </tbody>
         </div>

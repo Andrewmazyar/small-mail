@@ -1,6 +1,6 @@
 package com.smallmail.smallmail.security;
 
-import com.smallmail.smallmail.Service.UserService;
+import com.smallmail.smallmail.service.UserService;
 import com.smallmail.smallmail.model.entity.User;
 import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,242 +1,189 @@
-2020-08-09 17:35:27.277  INFO 14223 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Starting SmallMailApplication on user-X540SC with PID 14223 (/home/user/IdeaProjects/small-mail/target/classes started by user in /home/user/IdeaProjects/small-mail)
-2020-08-09 17:35:27.287  INFO 14223 --- [restartedMain] c.s.smallmail.SmallMailApplication       : No active profile set, falling back to default profiles: default
-2020-08-09 17:35:27.428  INFO 14223 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-09 17:35:27.429  INFO 14223 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-09 17:35:30.316  INFO 14223 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-09 17:35:30.394  INFO 14223 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 0 JPA repository interfaces.
-2020-08-09 17:35:32.447  INFO 14223 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-09 17:35:32.468  INFO 14223 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-09 17:35:32.469  INFO 14223 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2020-08-09 17:35:32.686  INFO 14223 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-09 17:35:32.687  INFO 14223 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5255 ms
-2020-08-09 17:35:32.812  INFO 14223 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-09 17:35:33.109  INFO 14223 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-09 17:35:33.122  INFO 14223 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2020-08-09 17:35:33.944  INFO 14223 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-09 17:35:34.235  INFO 14223 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-09 17:35:34.472  INFO 14223 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
-2020-08-09 17:35:34.591  WARN 14223 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-09 17:35:35.327  INFO 14223 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4bd73ee, org.springframework.security.web.context.SecurityContextPersistenceFilter@249cdb13, org.springframework.security.web.header.HeaderWriterFilter@132b3cb5, org.springframework.security.web.authentication.logout.LogoutFilter@198dfe63, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@29574b2a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7fd64105, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5b8fee11, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@572f70a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@252e245e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b5c86c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@abc8afd, org.springframework.security.web.session.SessionManagementFilter@88c38e7, org.springframework.security.web.access.ExceptionTranslationFilter@77056c54, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a6c551a]
-2020-08-09 17:35:35.419  INFO 14223 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-09 17:35:36.132  INFO 14223 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-08-09 17:35:36.207 DEBUG 14223 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-08-09 17:35:36.477 DEBUG 14223 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2020-08-09 17:35:36.619 DEBUG 14223 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-08-09 17:35:36.693 DEBUG 14223 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-08-09 17:35:37.348  INFO 14223 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-09 17:35:37.388  INFO 14223 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 17:35:37.394  INFO 14223 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-09 17:35:37.725  INFO 14223 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-09 17:35:37.729  INFO 14223 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-09 17:35:37.731  INFO 14223 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-09 17:35:37.802  INFO 14223 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Started SmallMailApplication in 12.552 seconds (JVM running for 16.694)
-2020-08-09 17:35:42.226  INFO 14223 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-09 17:35:42.227  INFO 14223 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-09 17:35:42.228 DEBUG 14223 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2020-08-09 17:35:42.306 DEBUG 14223 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-08-09 17:35:42.307  INFO 14223 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 80 ms
-2020-08-09 17:35:42.450 DEBUG 14223 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 17:35:42.457 DEBUG 14223 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 17:35:42.875 DEBUG 14223 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 17:35:43.876 DEBUG 14223 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 17:35:46.451 DEBUG 14223 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/user-details/deputy@gmail.com", parameters={}
-2020-08-09 17:35:46.460 DEBUG 14223 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#getUserDetail(Model, String)
-2020-08-09 17:35:46.539 DEBUG 14223 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 17:35:46.567 DEBUG 14223 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 17:35:49.952 DEBUG 14223 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/user-details", parameters={masked}
-2020-08-09 17:35:49.954 DEBUG 14223 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#addRoleApiCallForUser(String)
-2020-08-09 17:35:50.026  INFO 14223 --- [http-nio-8080-exec-3] c.s.smallmail.dao.impl.UserDaoImpl       : user 4 was added role  USER successfully
-2020-08-09 17:35:50.029  INFO 14223 --- [http-nio-8080-exec-3] c.s.smallmail.dao.impl.UserDaoImpl       : user 4 was added role  APICALL successfully
-2020-08-09 17:35:50.039 DEBUG 14223 --- [http-nio-8080-exec-3] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
-2020-08-09 17:35:50.043 DEBUG 14223 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
-2020-08-09 17:35:50.056 DEBUG 14223 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 17:35:50.061 DEBUG 14223 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 17:35:50.069 DEBUG 14223 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 17:35:50.126 DEBUG 14223 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 17:38:02.881 DEBUG 14223 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/user-details/deputy@gmail.com", parameters={}
-2020-08-09 17:38:02.886 DEBUG 14223 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#getUserDetail(Model, String)
-2020-08-09 17:38:02.897 DEBUG 14223 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 17:38:02.929 DEBUG 14223 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 17:38:04.626 DEBUG 14223 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/user-details", parameters={masked}
-2020-08-09 17:38:04.628 DEBUG 14223 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#addRoleApiCallForUser(String)
-2020-08-09 17:38:04.639  INFO 14223 --- [http-nio-8080-exec-8] c.s.smallmail.dao.impl.UserDaoImpl       : user 4 was added role  USER successfully
-2020-08-09 17:38:04.642 DEBUG 14223 --- [http-nio-8080-exec-8] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
-2020-08-09 17:38:04.643 DEBUG 14223 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
-2020-08-09 17:38:04.654 DEBUG 14223 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 17:38:04.655 DEBUG 14223 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 17:38:04.665 DEBUG 14223 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 17:38:04.691 DEBUG 14223 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 17:39:25.254  INFO 14223 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 17:39:25.256  INFO 14223 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2020-08-09 17:39:25.335  INFO 14223 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-08-09 17:39:25.750  WARN 14223 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2020-08-09 17:39:25.752  INFO 14223 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-08-09 17:39:25.787  INFO 14223 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-08-09 17:39:34.600  INFO 14507 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Starting SmallMailApplication on user-X540SC with PID 14507 (/home/user/IdeaProjects/small-mail/target/classes started by user in /home/user/IdeaProjects/small-mail)
-2020-08-09 17:39:34.612  INFO 14507 --- [restartedMain] c.s.smallmail.SmallMailApplication       : No active profile set, falling back to default profiles: default
-2020-08-09 17:39:34.800  INFO 14507 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-09 17:39:34.802  INFO 14507 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-09 17:39:36.969  INFO 14507 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-09 17:39:37.043  INFO 14507 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 0 JPA repository interfaces.
-2020-08-09 17:39:38.840  INFO 14507 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-09 17:39:38.861  INFO 14507 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-09 17:39:38.862  INFO 14507 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2020-08-09 17:39:39.117  INFO 14507 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-09 17:39:39.118  INFO 14507 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4315 ms
-2020-08-09 17:39:39.272  INFO 14507 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-09 17:39:39.635  INFO 14507 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-09 17:39:39.649  INFO 14507 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2020-08-09 17:39:40.082  INFO 14507 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-09 17:39:40.214  INFO 14507 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-09 17:39:40.322  INFO 14507 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
-2020-08-09 17:39:40.490  WARN 14507 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-09 17:39:40.596  INFO 14507 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-09 17:39:40.961  INFO 14507 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-08-09 17:39:41.142  INFO 14507 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f661850, org.springframework.security.web.context.SecurityContextPersistenceFilter@7758d226, org.springframework.security.web.header.HeaderWriterFilter@4edb5967, org.springframework.security.web.authentication.logout.LogoutFilter@78c266e2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@12b97525, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@572c913a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6f301730, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@da437b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f100bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@375806aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37bf7857, org.springframework.security.web.session.SessionManagementFilter@3ca08048, org.springframework.security.web.access.ExceptionTranslationFilter@7edc9566, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5667c5d]
-2020-08-09 17:39:41.442  INFO 14507 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-09 17:39:41.459  INFO 14507 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 17:39:41.483 DEBUG 14507 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-08-09 17:39:41.615 DEBUG 14507 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2020-08-09 17:39:41.691 DEBUG 14507 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-08-09 17:39:41.793  INFO 14507 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-09 17:39:41.813 DEBUG 14507 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-08-09 17:39:42.248  INFO 14507 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-09 17:39:42.252  INFO 14507 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-09 17:39:42.254  INFO 14507 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-09 17:39:42.319  INFO 14507 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Started SmallMailApplication in 9.029 seconds (JVM running for 12.093)
-2020-08-09 17:40:01.292  INFO 14507 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-09 17:40:01.293  INFO 14507 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-09 17:40:01.295 DEBUG 14507 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2020-08-09 17:40:01.314 DEBUG 14507 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-08-09 17:40:01.315  INFO 14507 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
-2020-08-09 17:40:01.371 DEBUG 14507 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/user-details/deputy@gmail.com", parameters={}
-2020-08-09 17:40:01.384 DEBUG 14507 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#getUserDetail(Model, String)
-2020-08-09 17:40:01.684 DEBUG 14507 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 17:40:02.510 DEBUG 14507 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 17:40:05.656 DEBUG 14507 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/user-details", parameters={masked}
-2020-08-09 17:40:05.658 DEBUG 14507 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#addRoleApiCallForUser(String)
-2020-08-09 17:40:05.707  INFO 14507 --- [http-nio-8080-exec-2] c.s.smallmail.dao.impl.UserDaoImpl       : user 4 was added role  APICALL successfully
-2020-08-09 17:40:05.710  INFO 14507 --- [http-nio-8080-exec-2] c.s.smallmail.dao.impl.UserDaoImpl       : user 4 was added role  USER successfully
-2020-08-09 17:40:05.720 DEBUG 14507 --- [http-nio-8080-exec-2] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
-2020-08-09 17:40:05.723 DEBUG 14507 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
-2020-08-09 17:40:05.739 DEBUG 14507 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 17:40:05.741 DEBUG 14507 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 17:40:05.777 DEBUG 14507 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 17:40:05.894 DEBUG 14507 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 17:42:40.133  INFO 14507 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 17:42:40.134  INFO 14507 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2020-08-09 17:42:40.146  INFO 14507 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-08-09 17:42:40.491  WARN 14507 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2020-08-09 17:42:40.494  INFO 14507 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-08-09 17:42:40.507  INFO 14507 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-08-09 18:05:55.081 DEBUG 15824 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Starting SmallMailApplication on user-X540SC with PID 15824 (/home/user/IdeaProjects/small-mail/target/classes started by user in /home/user/IdeaProjects/small-mail)
-2020-08-09 18:05:55.100 DEBUG 15824 --- [restartedMain] c.s.smallmail.SmallMailApplication       : No active profile set, falling back to default profiles: default
-2020-08-09 18:05:55.311 DEBUG 15824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-09 18:05:55.312 DEBUG 15824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-09 18:05:59.224 DEBUG 15824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-09 18:05:59.345 DEBUG 15824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 0 JPA repository interfaces.
-2020-08-09 18:06:02.437 DEBUG 15824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-09 18:06:02.488 DEBUG 15824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-09 18:06:02.489 DEBUG 15824 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2020-08-09 18:06:02.891 DEBUG 15824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-09 18:06:02.893 DEBUG 15824 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7579 ms
-2020-08-09 18:06:03.036 DEBUG 15824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-09 18:06:03.659 DEBUG 15824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-09 18:06:03.675 DEBUG 15824 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2020-08-09 18:06:04.691 DEBUG 15824 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-09 18:06:05.308 DEBUG 15824 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-09 18:06:05.702 DEBUG 15824 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-09 18:06:05.712 DEBUG 15824 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
-2020-08-09 18:06:06.567 DEBUG 15824 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2787ac1b, org.springframework.security.web.context.SecurityContextPersistenceFilter@12a80627, org.springframework.security.web.header.HeaderWriterFilter@4096ad7f, org.springframework.security.web.authentication.logout.LogoutFilter@6b8ea02b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2c1db546, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@78b11a7a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3b291611, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@656d6fef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d0e6451, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bdb70bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@703e6354, org.springframework.security.web.session.SessionManagementFilter@379c635, org.springframework.security.web.access.ExceptionTranslationFilter@29121ba3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74d65f68]
-2020-08-09 18:06:06.647 DEBUG 15824 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-09 18:06:07.528 DEBUG 15824 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-08-09 18:06:07.578 DEBUG 15824 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-08-09 18:06:07.803 DEBUG 15824 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2020-08-09 18:06:07.966 DEBUG 15824 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-08-09 18:06:08.028 DEBUG 15824 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-08-09 18:06:09.595 DEBUG 15824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-09 18:06:09.613 DEBUG 15824 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-09 18:06:09.692 DEBUG 15824 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 18:06:09.875 DEBUG 15824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-09 18:06:09.881 DEBUG 15824 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-09 18:06:09.884 DEBUG 15824 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-09 18:06:09.994 DEBUG 15824 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Started SmallMailApplication in 17.859 seconds (JVM running for 28.861)
-2020-08-09 18:09:45.668 DEBUG 15824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-09 18:09:45.691 DEBUG 15824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-08-09 18:09:45.692 DEBUG 15824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2020-08-09 18:09:46.735 DEBUG 15824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-08-09 18:09:46.737 DEBUG 15824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1045 ms
-2020-08-09 18:09:48.675 DEBUG 15824 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 18:09:48.677 DEBUG 15824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 18:09:48.678 DEBUG 15824 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 18:09:48.681 DEBUG 15824 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 18:09:48.902 DEBUG 15824 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 18:09:48.902 DEBUG 15824 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 18:09:48.902 DEBUG 15824 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 18:09:48.902 DEBUG 15824 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 18:09:54.571 DEBUG 15824 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 18:09:54.571 DEBUG 15824 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 18:09:54.571 DEBUG 15824 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 18:09:54.571 DEBUG 15824 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 18:09:58.778 DEBUG 15824 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 18:09:58.778 DEBUG 15824 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 18:09:58.780 DEBUG 15824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 18:09:58.781 DEBUG 15824 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 18:10:00.955 DEBUG 15824 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/user-details/deputy@gmail.com", parameters={}
-2020-08-09 18:10:00.962 DEBUG 15824 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#getUserDetail(Model, String)
-2020-08-09 18:10:01.453 DEBUG 15824 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 18:10:01.566 DEBUG 15824 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 18:10:04.715 DEBUG 15824 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/user-details", parameters={masked}
-2020-08-09 18:10:04.716 DEBUG 15824 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#addRoleApiCallForUser(String)
-2020-08-09 18:10:04.803 DEBUG 15824 --- [http-nio-8080-exec-7] c.s.smallmail.dao.impl.UserDaoImpl       : user 4 was added role  USER successfully
-2020-08-09 18:10:04.839 DEBUG 15824 --- [http-nio-8080-exec-7] c.s.smallmail.dao.impl.UserDaoImpl       : user 4 was added role  APICALL successfully
-2020-08-09 18:10:04.909 DEBUG 15824 --- [http-nio-8080-exec-7] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
-2020-08-09 18:10:04.912 DEBUG 15824 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
-2020-08-09 18:10:04.933 DEBUG 15824 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
-2020-08-09 18:10:04.935 DEBUG 15824 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
-2020-08-09 18:10:04.944 DEBUG 15824 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-2020-08-09 18:10:04.956 DEBUG 15824 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2020-08-09 18:14:28.297 DEBUG 15824 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 18:14:28.330 DEBUG 15824 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2020-08-09 18:14:28.443 DEBUG 15824 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-08-09 18:14:29.079 DEBUG 15824 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2020-08-09 18:14:29.083 DEBUG 15824 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-08-09 18:14:29.117 DEBUG 15824 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-08-09 19:42:00.072 DEBUG 19025 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Starting SmallMailApplication on user-X540SC with PID 19025 (/home/user/IdeaProjects/small-mail/target/classes started by user in /home/user/IdeaProjects/small-mail)
-2020-08-09 19:42:00.098 DEBUG 19025 --- [restartedMain] c.s.smallmail.SmallMailApplication       : No active profile set, falling back to default profiles: default
-2020-08-09 19:42:00.251 DEBUG 19025 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-08-09 19:42:00.252 DEBUG 19025 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-08-09 19:42:03.315 DEBUG 19025 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-08-09 19:42:03.399 DEBUG 19025 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 0 JPA repository interfaces.
-2020-08-09 19:42:05.601 DEBUG 19025 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-08-09 19:42:05.624 DEBUG 19025 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-08-09 19:42:05.625 DEBUG 19025 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2020-08-09 19:42:05.907 DEBUG 19025 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-08-09 19:42:05.908 DEBUG 19025 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5655 ms
-2020-08-09 19:42:06.024 DEBUG 19025 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-08-09 19:42:06.533 DEBUG 19025 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-08-09 19:42:06.546 DEBUG 19025 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2020-08-09 19:42:07.217 DEBUG 19025 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-09 19:42:07.398 DEBUG 19025 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-08-09 19:42:07.632 DEBUG 19025 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
-2020-08-09 19:42:07.682 DEBUG 19025 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-08-09 19:42:08.288 DEBUG 19025 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-08-09 19:42:08.403 DEBUG 19025 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e109d5b, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e2c042, org.springframework.security.web.header.HeaderWriterFilter@824a15f, org.springframework.security.web.authentication.logout.LogoutFilter@6e189cf1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1715b19b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7f989d01, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3550d078, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@646b1a51, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c5021a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ee611ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47df7ce, org.springframework.security.web.session.SessionManagementFilter@121cceb2, org.springframework.security.web.access.ExceptionTranslationFilter@2c289b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44afeef2]
-2020-08-09 19:42:08.839 DEBUG 19025 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-08-09 19:42:09.045 DEBUG 19025 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-08-09 19:42:09.421 DEBUG 19025 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2020-08-09 19:42:09.494 DEBUG 19025 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-08-09 19:42:09.524 DEBUG 19025 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-08-09 19:42:09.683 DEBUG 19025 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-08-09 19:42:09.756 DEBUG 19025 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 19:42:09.905 DEBUG 19025 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-08-09 19:42:10.229 DEBUG 19025 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-09 19:42:10.234 DEBUG 19025 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-08-09 19:42:10.235 DEBUG 19025 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-08-09 19:42:10.282 DEBUG 19025 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Started SmallMailApplication in 12.434 seconds (JVM running for 16.237)
-2020-08-09 19:42:37.099 DEBUG 19025 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-08-09 19:42:37.101 DEBUG 19025 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2020-08-09 19:42:37.166 DEBUG 19025 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-08-09 19:42:37.506 DEBUG 19025 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2020-08-09 19:42:37.508 DEBUG 19025 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-08-09 19:42:37.526 DEBUG 19025 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 14:19:20.668 DEBUG 14460 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Starting SmallMailApplication on user-X540SC with PID 14460 (/home/user/IdeaProjects/small-mail/target/classes started by user in /home/user/IdeaProjects/small-mail)
+2020-08-10 14:19:20.732 DEBUG 14460 --- [restartedMain] c.s.smallmail.SmallMailApplication       : No active profile set, falling back to default profiles: default
+2020-08-10 14:19:21.639 DEBUG 14460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-10 14:19:21.640 DEBUG 14460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-10 14:19:40.612 DEBUG 14460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-10 14:19:41.892 DEBUG 14460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 480ms. Found 0 JPA repository interfaces.
+2020-08-10 14:19:53.682 DEBUG 14460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-10 14:19:53.796 DEBUG 14460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-10 14:19:53.803 DEBUG 14460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-10 14:19:54.646 DEBUG 14460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-10 14:19:54.648 DEBUG 14460 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 33004 ms
+2020-08-10 14:19:55.218 DEBUG 14460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 14:19:58.186 DEBUG 14460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 14:19:58.202 DEBUG 14460 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-08-10 14:19:58.992 DEBUG 14460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-10 14:19:59.398 DEBUG 14460 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-10 14:19:59.590 DEBUG 14460 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-10 14:19:59.747 DEBUG 14460 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-10 14:20:00.848 DEBUG 14460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66fb76c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f30f5eb, org.springframework.security.web.header.HeaderWriterFilter@188edb71, org.springframework.security.web.authentication.logout.LogoutFilter@1d912af, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6d6cf448, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@39d3045a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@14bac5b3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@14ccdef3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e59b55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f75f3bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@233f30a6, org.springframework.security.web.session.SessionManagementFilter@5b375281, org.springframework.security.web.access.ExceptionTranslationFilter@15bd9d1e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52ca0446]
+2020-08-10 14:20:00.891 DEBUG 14460 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-10 14:20:02.031 DEBUG 14460 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-08-10 14:20:02.254 DEBUG 14460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-08-10 14:20:02.779 DEBUG 14460 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2020-08-10 14:20:02.887 DEBUG 14460 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-08-10 14:20:02.924 DEBUG 14460 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-08-10 14:20:03.276 DEBUG 14460 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-10 14:20:03.343 DEBUG 14460 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-10 14:20:03.420 DEBUG 14460 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-10 14:20:04.091 DEBUG 14460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-10 14:20:04.096 DEBUG 14460 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-10 14:20:04.099 DEBUG 14460 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-10 14:20:04.209 DEBUG 14460 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Started SmallMailApplication in 50.043 seconds (JVM running for 69.307)
+2020-08-10 14:25:45.400 DEBUG 14460 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-10 14:25:45.401 DEBUG 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-10 14:25:45.403 DEBUG 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-08-10 14:25:45.472 DEBUG 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-08-10 14:25:45.473 DEBUG 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 71 ms
+2020-08-10 14:25:49.778 DEBUG 14460 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:25:49.801 DEBUG 14460 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:25:50.322 DEBUG 14460 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:25:51.922 DEBUG 14460 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:25:52.145 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2020-08-10 14:25:52.402 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-08-10 14:25:52.432 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-08-10 14:25:52.434 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-08-10 14:25:52.443 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-08-10 14:25:52.488 DEBUG 14460 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-08-10 14:25:53.428 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-08-10 14:25:53.430 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Aug 10 14:25:52 EEST 2020, status=404, error=Not Found, message=No message available, (truncated)...]
+2020-08-10 14:25:53.467 DEBUG 14460 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/user-details/user@gmail.com", parameters={}
+2020-08-10 14:25:53.471 DEBUG 14460 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#getUserDetail(Model, String)
+2020-08-10 14:25:53.832 DEBUG 14460 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:25:53.871 DEBUG 14460 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:25:54.092 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2020-08-10 14:25:54.094 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-08-10 14:25:54.099 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2020-08-10 14:25:54.100 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2020-08-10 14:25:54.102 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-08-10 14:25:54.112 DEBUG 14460 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-08-10 14:25:54.132 DEBUG 14460 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-08-10 14:25:54.142 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-08-10 14:25:54.143 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Aug 10 14:25:54 EEST 2020, status=404, error=Not Found, message=No message available, (truncated)...]
+2020-08-10 14:25:54.148 DEBUG 14460 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2020-08-10 14:25:59.854 DEBUG 14460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/user-details", parameters={masked}
+2020-08-10 14:25:59.859 DEBUG 14460 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#addRoleApiCallForUser(String)
+2020-08-10 14:26:00.001 DEBUG 14460 --- [http-nio-8080-exec-1] c.s.smallmail.dao.impl.UserDaoImpl       : user 1 was added role  USER successfully
+2020-08-10 14:26:00.012 DEBUG 14460 --- [http-nio-8080-exec-1] c.s.smallmail.dao.impl.UserDaoImpl       : user 1 was added role  APICALL successfully
+2020-08-10 14:26:00.055 DEBUG 14460 --- [http-nio-8080-exec-1] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
+2020-08-10 14:26:00.060 DEBUG 14460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2020-08-10 14:26:00.082 DEBUG 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:26:00.083 DEBUG 14460 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:26:00.106 DEBUG 14460 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:26:00.143 DEBUG 14460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:28:42.395 DEBUG 14460 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-10 14:28:42.397 DEBUG 14460 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-08-10 14:28:42.429 DEBUG 14460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-10 14:28:42.877 DEBUG 14460 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-08-10 14:28:42.896 DEBUG 14460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 14:28:42.946 DEBUG 14460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 14:29:07.971 DEBUG 15220 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Starting SmallMailApplication on user-X540SC with PID 15220 (/home/user/IdeaProjects/small-mail/target/classes started by user in /home/user/IdeaProjects/small-mail)
+2020-08-10 14:29:07.979 DEBUG 15220 --- [restartedMain] c.s.smallmail.SmallMailApplication       : No active profile set, falling back to default profiles: default
+2020-08-10 14:29:08.242 DEBUG 15220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-10 14:29:08.243 DEBUG 15220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-10 14:29:12.687 DEBUG 15220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-10 14:29:12.889 DEBUG 15220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132ms. Found 0 JPA repository interfaces.
+2020-08-10 14:29:15.621 DEBUG 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-10 14:29:15.646 DEBUG 15220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-10 14:29:15.647 DEBUG 15220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-10 14:29:15.947 DEBUG 15220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-10 14:29:15.948 DEBUG 15220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7704 ms
+2020-08-10 14:29:16.069 DEBUG 15220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 14:29:16.776 DEBUG 15220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 14:29:16.792 DEBUG 15220 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-08-10 14:29:17.529 DEBUG 15220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-10 14:29:17.706 DEBUG 15220 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-10 14:29:17.888 DEBUG 15220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-10 14:29:18.056 DEBUG 15220 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-10 14:29:18.730 DEBUG 15220 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-10 14:29:18.892 DEBUG 15220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e751933, org.springframework.security.web.context.SecurityContextPersistenceFilter@53bb988a, org.springframework.security.web.header.HeaderWriterFilter@36da5311, org.springframework.security.web.authentication.logout.LogoutFilter@4465ee49, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c2bd781, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5f661df4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5b30436d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@106ac447, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@469960ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58d693d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8b89a1c, org.springframework.security.web.session.SessionManagementFilter@1ee4f107, org.springframework.security.web.access.ExceptionTranslationFilter@2b53188b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@587bf797]
+2020-08-10 14:29:19.769 DEBUG 15220 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-08-10 14:29:19.888 DEBUG 15220 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-08-10 14:29:20.145 DEBUG 15220 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2020-08-10 14:29:20.288 DEBUG 15220 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-08-10 14:29:20.334 DEBUG 15220 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-08-10 14:29:20.695 DEBUG 15220 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-10 14:29:20.746 DEBUG 15220 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-10 14:29:20.788 DEBUG 15220 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-10 14:29:20.985 DEBUG 15220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-10 14:29:20.990 DEBUG 15220 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-10 14:29:20.992 DEBUG 15220 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-10 14:29:21.054 DEBUG 15220 --- [restartedMain] c.s.smallmail.SmallMailApplication       : Started SmallMailApplication in 16.275 seconds (JVM running for 25.142)
+2020-08-10 14:29:43.005 DEBUG 15220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-10 14:29:43.006 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-10 14:29:43.006 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-08-10 14:29:43.033 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-08-10 14:29:43.034 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-08-10 14:29:43.084 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:29:43.111 DEBUG 15220 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:29:43.547 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:29:45.161 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:29:49.936 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:29:49.937 DEBUG 15220 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:29:49.944 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:29:49.959 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:29:54.548 DEBUG 15220 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2020-08-10 14:29:54.559 DEBUG 15220 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-08-10 14:29:54.587 DEBUG 15220 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-08-10 14:29:54.609 DEBUG 15220 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2020-08-10 14:29:56.922 DEBUG 15220 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:29:56.924 DEBUG 15220 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:29:56.932 DEBUG 15220 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:29:56.945 DEBUG 15220 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:31:37.600 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/user-details/user@gmail.com", parameters={}
+2020-08-10 14:31:37.604 DEBUG 15220 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#getUserDetail(Model, String)
+2020-08-10 14:31:37.699 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:31:37.721 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:33:14.254 DEBUG 15220 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/user-details", parameters={masked}
+2020-08-10 14:33:14.257 DEBUG 15220 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.UserDetailController#addRoleApiCallForUser(String)
+2020-08-10 14:33:14.411 DEBUG 15220 --- [http-nio-8080-exec-4] c.s.smallmail.dao.impl.UserDaoImpl       : user 1 was added role  USER successfully
+2020-08-10 14:33:14.415 DEBUG 15220 --- [http-nio-8080-exec-4] c.s.smallmail.dao.impl.UserDaoImpl       : user 1 was added role  APICALL successfully
+2020-08-10 14:33:14.453 DEBUG 15220 --- [http-nio-8080-exec-4] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
+2020-08-10 14:33:14.457 DEBUG 15220 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2020-08-10 14:33:14.472 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:33:14.473 DEBUG 15220 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:33:14.486 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:33:14.510 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:33:17.047 DEBUG 15220 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:33:17.049 DEBUG 15220 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:33:17.064 DEBUG 15220 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:33:17.076 DEBUG 15220 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:33:18.690 DEBUG 15220 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/mail", parameters={}
+2020-08-10 14:33:18.691 DEBUG 15220 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterController#get(Model)
+2020-08-10 14:33:18.729 DEBUG 15220 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:33:18.796 DEBUG 15220 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:33:23.106 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/mail", parameters={masked}
+2020-08-10 14:33:23.107 DEBUG 15220 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterController#create(String, String, String)
+2020-08-10 14:33:23.314 DEBUG 15220 --- [http-nio-8080-exec-1] c.s.smallmail.dao.impl.LetterDaoImpl     : user was created thanks successfully
+2020-08-10 14:33:23.343 DEBUG 15220 --- [http-nio-8080-exec-1] c.s.s.service.impl.LetterServiceImpl     : Letter was created 2020-08-10T14:33:23.245002 by owneruser@gmail.com
+2020-08-10 14:33:23.346 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
+2020-08-10 14:33:23.348 DEBUG 15220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2020-08-10 14:33:23.364 DEBUG 15220 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:33:23.365 DEBUG 15220 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:33:23.401 DEBUG 15220 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:33:23.419 DEBUG 15220 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:33:24.489 DEBUG 15220 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/details/1", parameters={}
+2020-08-10 14:33:24.493 DEBUG 15220 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterDetailController#getDetails(Long, Model)
+2020-08-10 14:33:24.518 DEBUG 15220 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:33:24.532 DEBUG 15220 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:33:26.901 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:33:26.902 DEBUG 15220 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:33:26.920 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:33:26.935 DEBUG 15220 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:33:36.399 DEBUG 15220 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/delete", parameters={masked}
+2020-08-10 14:33:36.401 DEBUG 15220 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#deleteAllMarks(Long[])
+2020-08-10 14:33:36.413 DEBUG 15220 --- [http-nio-8080-exec-7] c.s.smallmail.model.mapper.LetterMapper  : letter was deleted for user: user@gmail.com successfully
+2020-08-10 14:33:36.415 DEBUG 15220 --- [http-nio-8080-exec-7] c.s.s.service.impl.LetterServiceImpl     : Letter was updated by user user@gmail.com
+2020-08-10 14:33:36.432 DEBUG 15220 --- [http-nio-8080-exec-7] c.s.smallmail.model.mapper.LetterMapper  : letter was updated successfully
+2020-08-10 14:33:36.434 DEBUG 15220 --- [http-nio-8080-exec-7] o.s.web.servlet.view.RedirectView        : View name 'redirect:/', model {}
+2020-08-10 14:33:36.436 DEBUG 15220 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2020-08-10 14:33:36.447 DEBUG 15220 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-08-10 14:33:36.448 DEBUG 15220 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.smallmail.smallmail.controller.LetterResponseController#getALLLettersByUserLogin(Model)
+2020-08-10 14:33:36.462 DEBUG 15220 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-08-10 14:33:36.475 DEBUG 15220 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-08-10 14:34:49.629 DEBUG 15220 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-10 14:34:49.631 DEBUG 15220 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-08-10 14:34:49.665 DEBUG 15220 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-10 14:34:49.962 DEBUG 15220 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-08-10 14:34:49.964 DEBUG 15220 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 14:34:49.990 DEBUG 15220 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

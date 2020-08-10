@@ -1,7 +1,7 @@
 package com.smallmail.smallmail.controller;
 
-import com.smallmail.smallmail.Service.RoleService;
-import com.smallmail.smallmail.Service.UserService;
+import com.smallmail.smallmail.service.RoleService;
+import com.smallmail.smallmail.service.UserService;
 import com.smallmail.smallmail.model.dto.UserDetailDto;
 import com.smallmail.smallmail.model.entity.Role;
 import com.smallmail.smallmail.model.entity.User;

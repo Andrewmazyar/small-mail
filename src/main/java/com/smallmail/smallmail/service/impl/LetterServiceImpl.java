@@ -1,8 +1,8 @@
-package com.smallmail.smallmail.Service.impl;
+package com.smallmail.smallmail.service.impl;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import com.smallmail.smallmail.Service.LetterService;
+import com.smallmail.smallmail.service.LetterService;
 import com.smallmail.smallmail.dao.LetterDao;
 import com.smallmail.smallmail.model.entity.Letter;
 import org.apache.logging.log4j.LogManager;

@@ -1,6 +1,6 @@
 package com.smallmail.smallmail.controller;
 
-import com.smallmail.smallmail.Service.LetterService;
+import com.smallmail.smallmail.service.LetterService;
 import com.smallmail.smallmail.model.dto.LetterDetailDto;
 import com.smallmail.smallmail.model.dto.LetterRedirectDto;
 import com.smallmail.smallmail.model.mapper.LetterMapper;

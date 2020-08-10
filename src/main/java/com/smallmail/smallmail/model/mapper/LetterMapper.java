@@ -3,7 +3,7 @@ package com.smallmail.smallmail.model.mapper;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import com.smallmail.smallmail.Service.LetterService;
+import com.smallmail.smallmail.service.LetterService;
 import com.smallmail.smallmail.model.dto.LetterDetailDto;
 import com.smallmail.smallmail.model.dto.LetterResponseDto;
 import com.smallmail.smallmail.model.entity.Letter;
