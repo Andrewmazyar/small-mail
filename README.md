@@ -41,7 +41,7 @@ for run this app you should do in console:
  * java - jar target/small-mail-0.0.1-SNAPSHOT.jar
  
 When you start project you will receive 5 users with email and password:
-and you receive 5 users
+
 * name: user@gmail.com password: password
 * name: president@gmail.com password: president
 * name: minister@gmail.com password: minister
