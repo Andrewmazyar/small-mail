@@ -8,12 +8,16 @@
 - [4. Author](#4-author)
 
 ## 1.Project Purpose 
-this project is a simple version email where realize:
-* write message
-* detail message
-* reply to message
-* looking message by phrase
-* group delete letters with checkbox
+this project is a simple version email where user has two roles "USER" and "APICALL" where:
+* "USER" can:
+    * display all active users
+    * enter to own page and chose another role
+*  "APICALL" can:
+    * write message
+    * detail message
+    * reply to message
+    * looking message by phrase
+    * group delete letters with checkbox
 
 this project has authentication and authorization filters, Repository, Service and Controller layers.
 Repository layer has implementation on H2 DB.
