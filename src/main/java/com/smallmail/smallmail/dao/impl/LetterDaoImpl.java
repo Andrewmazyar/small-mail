@@ -116,8 +116,8 @@ public class LetterDaoImpl implements LetterDao {
     @Override
     public List<Letter> getAllByUserId(Long id) {
         String sql = "SELECT * FROM letters AS l LEFT JOIN user_letters AS ul "
-                + "ON  l.id = ul.letter_id GROUP BY l.timeStamp HAVING ul.user_id = ?"
-                + " OR l.user_id = ? ORDER By l.timeStamp DESC";
+                + "ON  l.id = ul.letter_id GROUP BY ul.user_id HAVING ul.user_id = ?"
+                + " OR l.user_id = ? ORDER BY l.timeStamp DESC";
         List<Letter> letters = jdbcTemplate.query(sql, new Object[]{id, id},
                 (rs, rowNum) ->
                 new Letter(

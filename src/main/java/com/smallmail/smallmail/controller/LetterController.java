@@ -51,10 +51,7 @@ public class LetterController {
         User sender = userService.getByEmail(userDetails.getUsername());
         letter.setSender(sender);
         letter.setOwner(sender.getEmail());
-        letter.setReceivers(letter.getRecipient()
-                .stream()
-                .map(User::getEmail)
-                .collect(Collectors.joining("; ")));
+        letter.setReceivers(recipient);
         letterService.create(letter);
         return "redirect:/";
     }
