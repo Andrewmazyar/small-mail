@@ -62,7 +62,7 @@ public class LetterDaoImpl implements LetterDao {
         String word = "%" + phrase + "%";
         String sql = "SELECT * FROM letters AS l LEFT JOIN user_letters AS ul "
                 + "ON  l.id = ul.letter_id WHERE l.theme LIKE ? OR l.body LIKE ? "
-                + "GROUP BY l.timeStamp HAVING ul.user_id = ? OR l.user_id = ? "
+                + "GROUP BY l.id, ul.user_id HAVING ul.user_id = ? OR l.user_id = ? "
                 + "ORDER BY l.timeStamp DESC LIMIT(20)";
         List<Letter> letters = jdbcTemplate.query(sql, new Object[]{word , word, id, id},
                 (rs, rowNum) ->
