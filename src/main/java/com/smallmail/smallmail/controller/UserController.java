@@ -5,11 +5,10 @@ import java.util.stream.Collectors;
 import com.smallmail.smallmail.service.UserService;
 import com.smallmail.smallmail.model.dto.UserResponseDto;
 import com.smallmail.smallmail.model.mapper.UserMapper;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class UserController {
     private final UserService userService;
     private final UserMapper userMapper;
@@ -19,12 +18,10 @@ public class UserController {
         this.userMapper = userMapper;
     }
     @GetMapping("/users")
-    public String getAllUsers(Model model) {
-        List<UserResponseDto> users = userService.getAll()
+    public List<UserResponseDto> getAllUsers() {
+        return userService.getAll()
                 .stream()
                 .map(userMapper::convertToDto)
                 .collect(Collectors.toList());
-        model.addAttribute("users", users);
-        return "user/users";
     }
 }
